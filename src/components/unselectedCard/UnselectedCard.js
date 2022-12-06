@@ -1,12 +1,15 @@
 import React from 'react'
-import { CtUnselectedCard, TxtUnselectedCard } from './UnselectedCard.styled'
+import { CtUnselectedCard, CtUnselectedCardGroup, TxtCardName, TxtUnselectedCard } from './UnselectedCard.styled'
 
-function UnselectedCard() {
+function UnselectedCard({text}) {
   return (
       <>
-        <CtUnselectedCard>
-            <TxtUnselectedCard>PASADO</TxtUnselectedCard>      
-        </CtUnselectedCard>
+        <CtUnselectedCardGroup>    
+            <TxtCardName>???</TxtCardName>
+            <CtUnselectedCard>
+              <TxtUnselectedCard text={text}>{text}</TxtUnselectedCard>      
+            </CtUnselectedCard>
+        </CtUnselectedCardGroup>
       </>
   )
 }

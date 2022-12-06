@@ -11,8 +11,15 @@ function UnselectedCard({ text, selectedCard }) {
     "sakuraCard": reverse,
   });
 
+  const [revealedCard, setRevealedCard] = useState(false);
+
   const reveal = () => {
     setCard(selectedCard);
+    setRevealedCard(true);
+    setTimeout(() => {
+      setRevealedCard(false);
+    }, 2000);
+    
   };
   
   return (
@@ -22,7 +29,7 @@ function UnselectedCard({ text, selectedCard }) {
             <>
             <CtUnselectedCardGroup>
               <TxtCardName>{card.spanishName} {card.kanji}</TxtCardName>
-              <CtSelectedCard onClick={reveal}>
+              <CtSelectedCard onClick={reveal} revealedCard={revealedCard}>
                 <ImgSelectedCard src={card.sakuraCard} /> 
               </CtSelectedCard>
             </CtUnselectedCardGroup>
@@ -36,7 +43,7 @@ function UnselectedCard({ text, selectedCard }) {
               </CtUnselectedCard>
             </CtUnselectedCardGroup>
           </>
-        }
+      }
       </>
   )
 }

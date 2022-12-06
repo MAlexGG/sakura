@@ -28,6 +28,8 @@ export const CtSelectedCard = styled.div`
     height: 100%;
     border-radius: 0.90rem;
     overflow: hidden;
+    transition: all 0.5s;
+    box-shadow: ${(props) => props.revealedCard ? '0px 0px 15px 10px var(--secondary-color)' : 'none'}
 `;
 
 export const ImgSelectedCard = styled.img`

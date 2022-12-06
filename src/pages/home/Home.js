@@ -1,20 +1,27 @@
 import React from 'react'
+import { useState } from 'react';
 import Cards from '../../components/cards/Cards';
 import Header from '../../components/header/Header';
 import UnselectedCard from '../../components/unselectedCard/UnselectedCard';
 import { CtUnselectedCards } from './Home.styled';
 
 function Home() {
+
+  const [selectedCards, setSelectedCards] = useState([]);
+
+  const past = selectedCards[0];
+  const present = selectedCards[1];
+  const future = selectedCards[2];
+
   return (
     <>
       <Header />
       <CtUnselectedCards>
-        <UnselectedCard text='PASADO' />
-        <UnselectedCard text='PRESENTE'/>
-        <UnselectedCard text='FUTURO'/>
+        <UnselectedCard selectedCard={past} text='PASADO' />
+        <UnselectedCard selectedCard={present} text='PRESENTE'/>
+        <UnselectedCard selectedCard={future} text='FUTURO'/>
       </CtUnselectedCards>
-      
-      <Cards/>
+      <Cards selectedCards={selectedCards} setSelectedCards={setSelectedCards} />
     </>
   )
 }

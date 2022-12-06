@@ -1,1 +1,0 @@
-export { SelectedCard } from './SelectedCard';

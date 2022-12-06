@@ -3,28 +3,28 @@ import Card from '../card/Card';
 import { sakuraService } from '../services/Sakura';
 import { CtCards } from './Cards.styled';
 
-function Cards() {
-
-    const [cards, setCards] = useState([]);
+function Cards({setSelectedCards, selectedCards}) {
+  
+  const [cards, setCards] = useState([]);
 
     const api = sakuraService();
 
   useEffect(() => {
     try {
-        api.getAll().then((res) => {
-            setCards(res);
-        })
+      api.getAll().then((res) => {
+        setCards(res);
+      })
     } catch (error) {
-        console.log(error);
+      console.log(error);
     };
-  }, [])
+  }, []);
   
     
     return (
       <>
           <CtCards>
                 {cards.map((el, index) => (
-                    <Card key={index} el={el} left={`${index * 2.5}vh`} />
+                  <Card key={index} el={el} left={`${index * 1.7}%`} selectedCards={selectedCards} setSelectedCards={setSelectedCards} />
                 ))}
           </CtCards>
         

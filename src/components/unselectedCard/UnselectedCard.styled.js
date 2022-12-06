@@ -5,16 +5,35 @@ export const CtUnselectedCardGroup = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 58vh;
+    width: 26vh;
 `;
 
 export const CtUnselectedCard = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 13.18rem;
-    height: 29.37rem;
+    width: 89%;
+    height: 100%;
     border: 5px dashed var(--main-color);
-    border-radius: 0.30rem;
+    border-radius: 0.90rem;
+    overflow: hidden;
+`;
+
+export const CtSelectedCard = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 89%;
+    height: 100%;
+    border-radius: 0.90rem;
+    overflow: hidden;
+`;
+
+export const ImgSelectedCard = styled.img`
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
 `;
 
 export const TxtUnselectedCard = styled.h3`

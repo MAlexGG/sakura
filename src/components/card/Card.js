@@ -2,11 +2,11 @@ import React from 'react'
 import { CtCard, ImgCard } from './Card.styled'
 import reverse from '../../assets/img/reverso.jpg';
 
-function Card({top}) {
+function Card({left}) {
   return (
       <>
-          <CtCard top={top}>
-              <ImgCard src={reverse} />
+        <CtCard left={left}>
+          <ImgCard src={reverse} />
         </CtCard>
       </>
   )

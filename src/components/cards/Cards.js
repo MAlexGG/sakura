@@ -1,29 +1,31 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react';
 import Card from '../card/Card';
-import { sakuraService } from '../services/Sakura'
+import { sakuraService } from '../services/Sakura';
 import { CtCards } from './Cards.styled';
 
 function Cards() {
 
     const [cards, setCards] = useState([]);
-    //const [topPosition, setTopPosition] = useState(0);
 
     const api = sakuraService();
 
-    useEffect(() => {
-        try {
-            api.getAll().then((res) => {
-                setCards(res.data);
-            })
-        } catch (error) {
-            console.log(error);
-        };
-    });
+  useEffect(() => {
+    try {
+        api.getAll().then((res) => {
+            setCards(res);
+        })
+    } catch (error) {
+        console.log(error);
+    };
+  }, [])
+  
     
-  return (
+    return (
       <>
           <CtCards>
-              {cards.map((el, index) => <Card key={index} el={el} top={`${index}vh`}/>)}
+                {cards.map((el, index) => (
+                    <Card key={index} el={el} left={`${index * 2.5}vh`} />
+                ))}
           </CtCards>
         
       </>

@@ -1,13 +1,16 @@
 import styled from 'styled-components';
 
-export const CtCard = styled.div`
-    width: 67px;
-    height: 150px;
+export const CtCard = styled.button`
+    width: 100px;
+    height: 223px;
     filter: drop-shadow(0px -4px 4px rgba(0, 0, 0, 0.5));
+    border: 2px solid var(--secondary-color);
     border-radius: 5px;
     overflow: hidden;
     position: absolute;
-    top: ${(props) => props.top};
+    top: 0px;
+    left: ${(props) => props.left};
+    padding: 0px;
 `;
 
 export const ImgCard = styled.img`

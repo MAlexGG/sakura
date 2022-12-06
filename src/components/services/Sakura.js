@@ -1,6 +1,6 @@
 export const sakuraService = () => {
 
-    const url = 'https://protected-taiga-89091.herokuapp.com/api/card';
+    const url = "https://6388b6e5a4bb27a7f78f96a5.mockapi.io/sakura-cards/";
     
     const customFetch = (endpoint, options) => {
         const defaultHeaders = {

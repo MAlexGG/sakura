@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Bahiana&family=Baloo+Bhaijaan+2:wght@500&display=swap');
 :root {
     --main-color: #F14680;
     --secondary-color: #F5CDD5;
@@ -6,10 +7,13 @@
     --fontSize-text: 18px;
     --fontSize-buttons: 20px;
     --breakpoint-s: 420px;
+    --principal-font: 'Bahiana', cursive;
+    --secondary-font: 'Baloo Bhaijaan 2', cursive;
 }
 
 * {
     background-color: var(--dark-color);
+    box-sizing: border-box;
 }
 
 .App {

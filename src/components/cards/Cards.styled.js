@@ -5,6 +5,5 @@ export const CtCards = styled.div`
     justify-content: center;
     align-items: center;
     position: relative;
-/*     width: 90vw;
-    height: 20vh; */
+    margin-left: 3.5rem;
 `;

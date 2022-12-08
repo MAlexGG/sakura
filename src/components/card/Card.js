@@ -3,7 +3,7 @@ import { CtCard, ImgCard } from './Card.styled'
 import reverse from '../../assets/img/reverso.jpg';
 import { useState } from 'react';
 
-function Card({ left, el, setSelectedCards, selectedCards}) {
+function Card({ left, el, setSelectedCards, selectedCards, cards}) {
 
   const [picked, setPicked] = useState(false);
 
@@ -13,6 +13,16 @@ function Card({ left, el, setSelectedCards, selectedCards}) {
     } else (alert('ya has seleccionado 3 cartas'));
     setPicked(true);
   };
+
+
+  /* const filterCards = (array) => {
+    if (selectedCards.length >= 1) {
+      const pastId = selectedCards[0].id;
+      var filteredArray = array.filter(el => el.id !== pastId);
+      setCards(filteredArray);
+    } return array;
+  } */
+
 
   return (
     <>

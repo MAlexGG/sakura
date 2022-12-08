@@ -27,7 +27,7 @@ function Cards({setSelectedCards, selectedCards}) {
     return cards;
   }, [cards]);
   
-  
+  console.log(cards)
   return (
     <>
       <CtCards>

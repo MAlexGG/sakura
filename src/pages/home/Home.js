@@ -22,7 +22,7 @@ function Home() {
         <UnselectedCard selectedCard={past} text='PASADO' />
         <UnselectedCard selectedCard={present} text='PRESENTE'/>
         <UnselectedCard selectedCard={future} text='FUTURO' />
-        <Link to='/'>
+        <Link to='/reading' state={{selectedCards : selectedCards}}>
           <BtReadCards>
             <ImgArrow src={arrow} alt='arrow button' />
             <TxtButton>LECTURA</TxtButton>

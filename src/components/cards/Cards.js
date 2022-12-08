@@ -26,7 +26,8 @@ function Cards({setSelectedCards, selectedCards}) {
   let randomCards = useMemo(() => {
     return cards;
   }, [cards]);
-    
+  
+  
   return (
     <>
       <CtCards>

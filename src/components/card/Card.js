@@ -14,16 +14,6 @@ function Card({ left, el, setSelectedCards, selectedCards, cards}) {
     setPicked(true);
   };
 
-
-  /* const filterCards = (array) => {
-    if (selectedCards.length >= 1) {
-      const pastId = selectedCards[0].id;
-      var filteredArray = array.filter(el => el.id !== pastId);
-      setCards(filteredArray);
-    } return array;
-  } */
-
-
   return (
     <>
       <CtCard left={left} onClick={getCard} selectedCards={selectedCards} picked={picked}>

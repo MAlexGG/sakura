@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import Card from '../card/Card';
-import { sakuraService } from '../services/Sakura';
+import { sakuraService } from '../../services/Sakura';
 import { CtCards } from './Cards.styled';
 
 function Cards({setSelectedCards, selectedCards}) {
